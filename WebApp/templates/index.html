@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html>
+<head>
+
+<title>CV Web App</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link href="/static/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      
+      <h1 class="logoname"><a href="#maincontent">C<span>V</span> Based Web App</a></h1>
+      
+    </div>
+
+    
+  </header>
+</div>
+
+
+<div class="streampart" id="maincontent">
+    <div class="feed">
+        <img class="livefeed" width="100%" src="{{url_for('video_feed')}}" alt="">
+    </div>
+
+    <div class="objects_title">
+        <h6>Objects Detected</h6>
+    </div>
+    <div class="objects_list">
+        <iframe src={{url_for('output')}} width="45%" height="420px" title="Output window" id="my_iframe"></iframe>
+    </div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+
+
+</body>
+</html>
